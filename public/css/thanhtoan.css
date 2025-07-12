@@ -1,0 +1,123 @@
+.checkout-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.checkout-title {
+    width: 100%;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #222;
+}
+
+.checkout-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 40px;
+}
+
+.form-section {
+    flex: 1;
+    min-width: 300px;
+}
+
+.form-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #49b749;
+}
+
+/* Bên phải - Đơn hàng */
+.order-summary {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 25px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.order-summary h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.order-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.order-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 16px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 8px;
+}
+
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+/* Nút đặt hàng */
+.btn-order {
+    display: block;
+    width: 100%;
+    background-color: #28a745;
+    color: #fff;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-order:hover {
+    background-color: #218838;
+}

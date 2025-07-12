@@ -1,0 +1,260 @@
+/* ---------- TỔNG THỂ ---------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; 
+}
+.col-md-4 {
+    flex: 0 0 30%; /*mỗi cột chiếm 30% không gian */
+    max-width: 32%; 
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; 
+}
+
+/* ---------- SIDEBAR ---------- */
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.list-group-item {
+    border: none;
+    padding: 10px 0;
+}
+
+.list-group-item a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s;
+}
+
+.list-group-item a:hover {
+    color: #e91e63;
+    font-weight: 500;
+}
+
+/* ---------- DANH SÁCH SẢN PHẨM ---------- */
+.col-md-9 {
+    flex: 0 0 72%;
+    max-width: 72%;
+}
+
+.card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-color: #f7f7f7;
+}
+
+.card-body {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+
+    height: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Giới hạn 2 dòng */
+    -webkit-box-orient: vertical;
+}
+
+
+.card-text {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+/* ---------- GIÁ ---------- */
+.text-danger {
+    color: #e91e63 !important;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.text-muted {
+    font-size: 14px;
+    color: #999 !important;
+}
+
+/* ---------- BADGE GIẢM GIÁ ---------- */
+.badge {
+    font-size: 13px;
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 992px) {
+    .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .col-md-9 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 14px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    .text-danger {
+        font-size: 15px;
+    }
+}
+
+.sidebar-widget {
+    margin-top: 30px;
+}
+
+.sidebar-widget .widget-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e91e63;
+    padding-bottom: 8px;
+    color: #e91e63;
+}
+
+.featured-product {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.featured-img img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.featured-info h6 {
+    font-size: 14px;
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+}
+
+.gia-noi-bat {
+    color: #e91e63;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+.gia-cu {
+    color: #999;
+    text-decoration: line-through;
+    font-size: 14px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.gia-moi {
+    color: #e91e63;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-block;
+}
+
+/* ---------- HIỆU ỨNG KHI DI CHUỘT VÀO SẢN PHẨM ---------- */
+.product-card {
+    position: relative;
+}
+
+
+.product-card:hover .hover-links {
+    display: block;
+}
+
+.hover-links {
+    display: none;
+    position: absolute;
+    top: 65%; /* canh chiều cao */
+    left: 50%;
+    transform: translate(-50%, -50%); /* dịch tâm ra đúng giữa */
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.hover-links a {
+    padding: 10px 20px;         
+    font-size: 15px;              
+    border-radius: 8px;              
+    color: white;
+    border: none;
+    margin: 5px 5px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.btn-xemchitiet {
+    background-color: #e91e63;
+}
+
+.btn-xemnhanh {
+    background-color: #007bff;
+}
+
+.btn-xemchitiet:hover,
+.btn-xemnhanh:hover {
+    filter: brightness(1.1);
+    transform: scale(1.2); /* hiệu ứng phóng nhẹ khi hover */
+}
+
+
+.hover-links a:hover {
+    opacity: 0.8;
+}

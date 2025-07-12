@@ -1,0 +1,108 @@
+/* Tổng thể */
+.tintuc-wrapper {
+    background-color: #fafafa;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tieude-chinh {
+    font-size: 36px;
+    color: #e56e6d; /* Màu đỏ nhẹ để tạo sự nổi bật */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Tiêu đề bài viết */
+.noidung-tintuc h2 {
+    color: #e56e6d; /* Màu đỏ nổi bật */
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Hình ảnh bài viết */
+.hinhanh-tintuc img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 500px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mô tả ngắn */
+.mota {
+    color: #666;
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+/* Ngày đăng */
+.ngaydang {
+    background-color: #e56e6d;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+/* Nội dung chi tiết */
+.noidung-tintuc p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* Liên kết trong bài viết */
+.noidung-tintuc a {
+    color: #e56e6d;
+    text-decoration: underline;
+}
+
+.noidung-tintuc a:hover {
+    color: #c94f4e;
+}
+
+/* Thiết kế cho phần tiêu đề và nội dung bài viết */
+.noidung-tintuc {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tối ưu cho di động */
+@media (max-width: 768px) {
+    .tieude-chinh {
+        font-size: 28px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .hinhanh-tintuc img {
+        height: 300px;
+    }
+
+    .noidung-tintuc {
+        padding: 20px;
+    }
+
+    .noidung-tintuc h2 {
+        font-size: 30px;
+    }
+
+    .noidung-tintuc p {
+        font-size: 16px;
+    }
+}

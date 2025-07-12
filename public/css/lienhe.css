@@ -1,0 +1,88 @@
+.lienhe-section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.breadcrumb {
+    font-size: 14px;
+    background: none;
+    padding-left: 0;
+}
+
+.breadcrumb a {
+    color: #888;
+    text-decoration: none;
+}
+
+.breadcrumb .active {
+    color: #f06292;
+}
+
+.lienhe-section p {
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.lienhe-section i {
+    color: #f06292;
+    margin-right: 8px;
+}
+
+form h4 {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border: 1px solid #e0e0e0;
+    border-radius: 30px;
+    padding: 12px 20px;
+    font-size: 15px;
+    background-color: #fff;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #f06292;
+    box-shadow: 0 0 5px rgba(240, 98, 146, 0.3);
+}
+
+textarea.form-control {
+    border-radius: 20px;
+    resize: none;
+}
+
+.btn-danger {
+    background-color: #f06292;
+    border: none;
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #ec407a;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: 0;
+}

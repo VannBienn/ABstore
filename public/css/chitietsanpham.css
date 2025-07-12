@@ -1,0 +1,163 @@
+.chitiet-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px;
+}
+
+.anh-sanpham {
+    flex: 1;
+    max-width: 450px;
+}
+
+.anh-sanpham img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.anh-phu {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.anh-phu img {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.noidung-sanpham {
+    flex: 1;
+    max-width: 600px;
+}
+
+.noidung-sanpham h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.thuong-hieu {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.thuong-hieu span {
+    color: #e26d5c;
+}
+
+.gia-sanpham {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.gia-moi {
+    font-weight: bold;
+    color: #ff6b81;
+    margin-right: 10px;
+}
+
+.gia-cu {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.mota-sanpham {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.chon-so-luong {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.so-luong-input {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.so-luong-input input {
+    width: 50px;
+    text-align: center;
+    border: none;
+}
+
+.so-luong-input button {
+    width: 30px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.nut-giohang {
+    background: #ff9f9f;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.goi-dat span {
+    font-weight: bold;
+    color: #f85b5b;
+}
+
+.sanpham-lienquan {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+/* san phẩm liên quan */
+.sanpham-lienquan h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.ds-lienquan {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.item-lienquan {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.item-lienquan img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-lienquan h4 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+
+.item-lienquan .gia {
+    color: #f66;
+    font-weight: bold;
+}
