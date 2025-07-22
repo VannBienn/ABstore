@@ -35,21 +35,39 @@
             <ul class="order-items">
                 @php $tongTien = 0; @endphp
                 @foreach ($giohang as $sp)
-                    @php
-                        $gia = $sp->gia_khuyen_mai ?? $sp->gia;
-                        $thanhTien = $gia * $sp->so_luong;
-                        $tongTien += $thanhTien;
-                    @endphp
-                    <li>
-                        <span>{{ $sp->ten_san_pham }} x {{ $sp->so_luong }}</span>
-                        <span>{{ number_format($thanhTien, 0, ',', '.') }}₫</span>
-                    </li>
+                @php
+                $gia = $sp->gia_khuyen_mai ?? $sp->gia;
+                $thanhTien = $gia * $sp->so_luong;
+                $tongTien += $thanhTien;
+                @endphp
+                <li>
+                    <span>{{ $sp->ten_san_pham }} x {{ $sp->so_luong }}</span>
+                    <span>{{ number_format($thanhTien, 0, ',', '.') }}₫</span>
+                </li>
                 @endforeach
             </ul>
+
             <p class="total">Tổng cộng: <strong>{{ number_format($tongTien, 0, ',', '.') }}₫</strong></p>
 
+            {{-- Thông báo chuyển khoản --}}
+            <div class="bank-transfer-box">
+                <p style="font-weight: bold; color: red;">
+                    Quý khách vui lòng chuyển khoản số tiền: <strong>{{ number_format($tongTien, 0, ',', '.') }}₫</strong> vào tài khoản ngân hàng dưới đây để tiến hành đặt hàng.
+                </p>
+                <ul style="line-height: 1.8;">
+                    <li><strong>Chủ tài khoản:</strong> NGUYEN VAN BIEN</li>
+                    <li><strong>Ngân hàng:</strong> Vietcombank - CN Hải Dương</li>
+                    <li><strong>Số tài khoản:</strong> 1030387366</li>
+                    <li><strong>Nội dung:</strong> {{ Auth::check() ? Auth::user()->name : 'Khach Hang' }} chuyển khoản</li>
+                </ul>
+
+                <div class="qr-section" style="margin: 10px 0; text-align:center;">
+                    <img src="{{ asset('images/qr.jpg') }}" alt="QR chuyển khoản" style="width:200px; border:1px solid #ccc; padding:5px; border-radius:8px;">
+                </div>
+            </div>
             <button type="submit" class="btn-order">Xác nhận đặt hàng</button>
         </div>
+
     </form>
 </div>
 @endsection

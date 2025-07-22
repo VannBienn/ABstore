@@ -13,12 +13,11 @@ class GioHangController extends Controller
     {
         if (Auth::check()) {
             $userId = Auth::id();
-            $giohang = GioHang::where('user_id', $userId)->get(); // Collection các object -> OK
+            $giohang = GioHang::where('user_id', $userId)->get(); 
         } else {
             $giohang = collect(session()->get('giohang', []))->map(function ($item, $id) {
                 return (object) array_merge($item, ['san_pham_id' => $id]);
             });
-            // Giờ mỗi item là object -> dùng ->property được
         }
 
         return view('frontend.giohang.index', compact('giohang'));

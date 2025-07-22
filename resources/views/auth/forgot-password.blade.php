@@ -1,25 +1,66 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-    </div>
+<div class="forgot-password-container">
+    <h2>Quên mật khẩu</h2>
 
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    @if (session('status'))
+        <div class="status-message">{{ session('status') }}</div>
+    @endif
 
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
-
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-primary-button>
-        </div>
+        <input type="email" name="email" placeholder="Nhập email để lấy lại mật khẩu" required>
+        <button type="submit">Gửi yêu cầu đặt lại mật khẩu</button>
     </form>
-</x-guest-layout>
+</div>
+<style>
+.forgot-password-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fefefe;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+.forgot-password-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+.forgot-password-container input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.forgot-password-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff5e57;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.forgot-password-container button:hover {
+    background-color: #e74c3c;
+}
+
+.forgot-password-container .status-message {
+    background-color: #d1f7d6;
+    color: #2e7d32;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+</style>

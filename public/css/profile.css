@@ -1,0 +1,183 @@
+/* Profile Page CSS */
+.profile-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.alert-success {
+    background-color: #e0ffe0;
+    color: #1a7f1a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #95a5a6;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.btn-warning {
+    background-color: #f39c12;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+.section-title {
+    font-size: 20px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.order-history {
+    overflow-x: auto;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.order-table th, .order-table td {
+    padding: 10px 12px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.order-table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.order-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.order-table a {
+    text-decoration: none;
+    color: #0066cc;
+}
+//đơn hàng
+    .donhang-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #fffdfd;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.order-info p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.order-table-wrapper {
+    overflow-x: auto;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.order-table thead {
+    background: #f4f4f4;
+}
+
+.order-table th, .order-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.product-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.product-name img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.btn-back {
+    display: inline-block;
+    margin-top: 20px;
+    background: #444;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-back:hover {
+    background: #222;
+}

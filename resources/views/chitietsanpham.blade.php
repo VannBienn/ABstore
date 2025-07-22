@@ -9,13 +9,13 @@
         <img src="{{ asset('uploads/' . $sanPham->hinh_anh) }}" alt="{{ $sanPham->ten_san_pham }}">
         <div class="anh-phu">
             @if ($sanPham->anh_phu_1)
-                <img src="{{ asset('uploads/' . $sanPham->anh_phu_1) }}" alt="">
+            <img src="{{ asset('uploads/' . $sanPham->anh_phu_1) }}" alt="">
             @endif
             @if ($sanPham->anh_phu_2)
-                <img src="{{ asset('uploads/' . $sanPham->anh_phu_2) }}" alt="">
+            <img src="{{ asset('uploads/' . $sanPham->anh_phu_2) }}" alt="">
             @endif
             @if ($sanPham->anh_phu_3)
-                <img src="{{ asset('uploads/' . $sanPham->anh_phu_3) }}" alt="">
+            <img src="{{ asset('uploads/' . $sanPham->anh_phu_3) }}" alt="">
             @endif
         </div>
     </div>
@@ -26,11 +26,11 @@
 
         <div class="gia-sanpham">
             @php
-                $giaMoi = $sanPham->gia - ($sanPham->gia * $sanPham->khuyen_mai / 100);
+            $giaMoi = $sanPham->gia - ($sanPham->gia * $sanPham->khuyen_mai / 100);
             @endphp
             <span class="gia-moi">{{ number_format($giaMoi, 0, ',', '.') }}đ</span>
             @if ($sanPham->khuyen_mai > 0)
-                <span class="gia-cu">{{ number_format($sanPham->gia, 0, ',', '.') }}đ</span>
+            <span class="gia-cu">{{ number_format($sanPham->gia, 0, ',', '.') }}đ</span>
             @endif
         </div>
 
@@ -58,25 +58,25 @@
     <h2>Sản phẩm liên quan</h2>
     <div class="ds-lienquan">
         @forelse ($sanPhamLienQuan as $sp)
-            <a href="{{ route('sanpham.show', $sp->id) }}" class="item-lienquan">
-                <img src="{{ asset('uploads/' . $sp->hinh_anh) }}" alt="{{ $sp->ten_san_pham }}">
-                <h4>{{ $sp->ten_san_pham }}</h4>
-                <p class="gia">{{ number_format($sp->gia, 0, ',', '.') }}đ</p>
-            </a>
+        <a href="{{ route('sanpham.show', $sp->id) }}" class="item-lienquan">
+            <img src="{{ asset('uploads/' . $sp->hinh_anh) }}" alt="{{ $sp->ten_san_pham }}">
+            <h4>{{ $sp->ten_san_pham }}</h4>
+            <p class="gia">{{ number_format($sp->gia, 0, ',', '.') }}đ</p>
+        </a>
         @empty
-            <p>Không có sản phẩm liên quan nào.</p>
+        <p>Không có sản phẩm liên quan nào.</p>
         @endforelse
     </div>
 </div>
 
 <script>
     // Tăng giảm số lượng
-    document.getElementById('increase').addEventListener('click', function () {
+    document.getElementById('increase').addEventListener('click', function() {
         var input = document.getElementById('quantity');
         input.value = parseInt(input.value) + 1;
     });
 
-    document.getElementById('decrease').addEventListener('click', function () {
+    document.getElementById('decrease').addEventListener('click', function() {
         var input = document.getElementById('quantity');
         if (parseInt(input.value) > 1) {
             input.value = parseInt(input.value) - 1;
@@ -84,33 +84,33 @@
     });
 
     // Thêm giỏ hàng bằng Ajax
-    document.querySelector('.nut-giohang').addEventListener('click', function () {
+    document.querySelector('.nut-giohang').addEventListener('click', function() {
         var sanpham_id = this.getAttribute('data-id');
         var so_luong = document.getElementById('quantity').value;
 
         fetch("{{ route('giohang.them.ajax') }}", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': '{{ csrf_token() }}'
-            },
-            body: JSON.stringify({
-                sanpham_id: sanpham_id,
-                so_luong: so_luong
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                body: JSON.stringify({
+                    sanpham_id: sanpham_id,
+                    so_luong: so_luong
+                })
             })
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.success) {
-                alert("Đã thêm vào giỏ hàng!");
-            } else {
-                alert("Thêm vào giỏ thất bại!");
-            }
-        })
-        .catch(err => {
-            console.error(err);
-            alert("Lỗi khi thêm sản phẩm vào giỏ.");
-        });
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Đã thêm vào giỏ hàng!");
+                } else {
+                    alert("Thêm vào giỏ thất bại!");
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                alert("Lỗi khi thêm sản phẩm vào giỏ.");
+            });
     });
 </script>
 @endsection

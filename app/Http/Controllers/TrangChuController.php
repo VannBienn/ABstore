@@ -10,8 +10,8 @@ class TrangChuController extends Controller
 {
     public function index()
     {
-        $sanPhamNoiBat = SanPham::where('noi_bat', true)->paginate(6);
-        $sanPhamKhuyenMai = SanPham::where('khuyen_mai', '>', 0)->paginate(6);
+        $sanPhamNoiBat = SanPham::where('noi_bat', true)->get();
+$sanPhamKhuyenMai = SanPham::where('khuyen_mai', '>', 0)->get();
         return view('trangchu', compact('sanPhamNoiBat', 'sanPhamKhuyenMai'));
     }
 }

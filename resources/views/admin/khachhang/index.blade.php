@@ -18,7 +18,7 @@
 
             <div class="table-responsive">
                 <table class="table table-bordered table-hover align-middle text-center">
-                    <thead class="table-dark">
+                    <thead class="table-dark text-center">
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Tên</th>

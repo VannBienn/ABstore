@@ -5,15 +5,12 @@
 @section('noidung')
 <div class="container">
     <h2>Đăng Nhập</h2>
-
-    {{-- Hiển thị thông báo lỗi chung --}}
     @if(session('error'))
         <div class="alert alert-danger">
             {{ session('error') }}
         </div>
     @endif
 
-    {{-- Hiển thị danh sách lỗi --}}
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul class="mb-0">
@@ -43,5 +40,6 @@
         <button type="submit" class="btn btn-primary">Đăng Nhập</button>
     </form>
     <p>Chưa có tài khoản? <a href="{{ route('register') }}">Đăng ký</a></p>
+    <a href="{{ route('password.request') }}">Quên mật khẩu ?</a>
 </div>
 @endsection

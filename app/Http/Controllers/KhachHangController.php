@@ -31,7 +31,7 @@ class KhachHangController extends Controller
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password), // <-- mã hóa
+            'password' => Hash::make($request->password), 
             'role' => $request->role
         ]);
 

@@ -18,7 +18,7 @@
         <div class="cot-chan-trang">
             <h4>HỖ TRỢ KHÁCH HÀNG</h4>
             <ul>
-                <li><a href="#">Chính sách đổi trả</a></li>
+                <li><a href="{{ route('chinh_sach_doi_tra') }}">Chính sách đổi trả</a></li>
                 <li><a href="#">Chính sách bảo mật</a></li>
                 <li><a href="#">Thanh toán và giao nhận</a></li>
             </ul>
@@ -26,7 +26,7 @@
         <div class="cot-chan-trang">
             <h4>VỀ BIEN STORE</h4>
             <ul>
-                <li><a href="{{ route('tintuc') }}">Tin tức</a></li>
+                <li><a href="{{ route('tintuc.fe') }}">Tin tức</a></li>
                 <li><a href="{{ route('lienhe') }}">Liên hệ</a></li>
                 <li><a href="#">Đăng ký đối tác</a></li>
             </ul>

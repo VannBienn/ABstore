@@ -9,7 +9,7 @@
 
     <div class="table-responsive">
         <table class="table table-bordered table-hover align-middle text-center">
-            <thead class="table-light">
+            <thead class="table-dark text-center">
                 <tr>
                     <th>Tên Sản Phẩm</th>
                     <th>Giá</th>

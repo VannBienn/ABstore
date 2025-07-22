@@ -16,16 +16,18 @@
 
             <div class="table-responsive">
                 <table class="table table-bordered table-hover align-middle text-center">
-                    <thead class="table-dark">
+                    <thead class="table-dark text-center">
                         <tr>
-                            <th scope="col">Tên Danh Mục</th>
-                            <th scope="col" style="width: 180px;">Hành Động</th>
+                            <th scope="col" style="width: 100px;">Tên Danh Mục</th>
+                            <th scope="col" style="width: 100px;">Hành Động</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($danhMucs as $danhMuc)
                         <tr>
-                            <td>{{ $danhMuc->ten_danh_muc }}</td>
+                            <td style="max-width: 100px; white-space: normal; word-wrap: break-word;">
+                                {{ $danhMuc->ten_danh_muc }}
+                            </td>
                             <td class="admin-action-buttons">
                                 <a href="{{ route('danh-muc.edit', $danhMuc->id) }}" class="btn-sua">Sửa</a>
                                 <form action="{{ route('danh-muc.destroy', $danhMuc->id) }}" method="POST">

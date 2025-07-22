@@ -23,6 +23,11 @@ class DonHangController extends Controller
 
         return view('frontend.donhang.thanhtoan', compact('giohang'));
     }
+    public function show($id)
+    {
+        $donHang = DonHang::with('chiTietDonHang.sanPham')->findOrFail($id);
+        return view('frontend.donhang.donhang_chitiet', compact('donHang'));
+    }
 
     public function datHang(Request $request)
     {

@@ -1,50 +1,123 @@
-/* General Admin Layout */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.admin-container {
+/* Tổng thể layout */
+.admin-layout {
     display: flex;
     min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
 }
 
-.sidebar {
-    width: 250px;
-    background-color: #2c3e50;
-    color: white;
-    padding-top: 20px;
+/* Sidebar */
+.sidebar-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.sidebar ul {
+.sidebar-menu a:hover {
+    background-color: #3b3b3b;
+}
+
+.sidebar-menu a.active {
+    background-color: #ffc107;
+    color: #000;
+    font-weight: bold;
+}
+
+.admin-sidebar {
+    width: 240px;
+    background-color: #343a40;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 15px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.sidebar-header {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #00e1ff;
+}
+
+.sidebar-menu {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
+    margin: 0;
 }
 
-.sidebar ul li {
-    margin: 15px 0;
+.sidebar-menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 6px;
+    transition: 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+    background-color: #495057;
+    color: #00e1ff;
+}
+
+/* Nút đăng xuất */
+.sidebar-bottom {
+    margin-top: auto;
     text-align: center;
 }
 
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px;
-    display: block;
+.logout-btn {
+    background-color: #dc3545;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
 }
 
-.sidebar ul li a:hover {
-    background-color: #34495e;
+.logout-btn:hover {
+    background-color: #c82333;
 }
 
-.main-content {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: #ffffff;
+/* Main content */
+.admin-main {
+    flex: 1;
+    margin-left: 240px;
+    padding: 30px;
+    background-color: #f8f9fa;
 }
+
+/* Header */
+.admin-header {
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .admin-sidebar {
+        display: none;
+    }
+    .admin-main {
+        margin-left: 0;
+    }
+}
+
 
 /* Alerts */
 .alert {
@@ -235,6 +308,7 @@ select {
     cursor: pointer;
 }
 
+
 /* Thêm danh mục */
 .form-container {
     max-width: 500px;
@@ -321,3 +395,98 @@ form input[type="file"] {
     margin-top: 5px;
 }
 
+.order-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.order-container h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #333;
+}
+
+.order-info p {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.status-badge.cho-xu-ly {
+    background: #ffeeba;
+    color: #856404;
+}
+
+.status-badge.dang-giao {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.status-badge.hoan-tat {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-badge.da-huy {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.status-form {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.status-form select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.status-form button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.status-form button:hover {
+    background: #218838;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.order-table th, .order-table td {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.order-table th {
+    background: #f5f5f5;
+}
+
+.order-table tr:nth-child(even) {
+    background-color: #fafafa;
+}

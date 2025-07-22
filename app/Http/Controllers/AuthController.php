@@ -20,8 +20,6 @@ class AuthController extends Controller
     // Xử lý đăng nhập
     public function login(Request $request)
     {
-        // dd(Auth::check(), Auth::user());
-
         $user = \App\Models\User::where('email', $request->email)->first();
 
         if ($user && Hash::check($request->password, $user->password)) {
@@ -30,11 +28,12 @@ class AuthController extends Controller
             if ($user->role === 'admin') {
                 return view('admin.dashboard', ['user' => $user]);
             }
-            return redirect()->route('trangchu');
+            return redirect()->intended('/');
         }
 
         return back()->with('error', 'Thông tin đăng nhập không chính xác');
     }
+
     // Hiển thị form đăng ký
     public function showRegisterForm()
     {

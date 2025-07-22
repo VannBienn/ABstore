@@ -21,4 +21,19 @@ class SanPham extends Model
     {
         return $this->belongsTo(DanhMucSanPham::class, 'danh_muc_id');
     }
+
+    // Giá cũ
+    public function getGiaCuAttribute()
+    {
+        return $this->gia;
+    }
+
+    // Giá sau khuyến mãi
+    public function getGiaMoiAttribute()
+    {
+        if ($this->khuyen_mai > 0) {
+            return $this->gia - ($this->gia * $this->khuyen_mai / 100);
+        }
+        return $this->gia;
+    }
 }

@@ -4,15 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\TinTuc;
-use Illuminate\Support\Facades\Storage;
 
 class TinTucController extends Controller
 {
-    
     public function index()
     {
         $dsTinTuc = TinTuc::latest()->get();
         return view('admin.tintuc.index', compact('dsTinTuc'));
+    }
+
+    public function indexFrontend()
+    {
+        $dsTinTuc = TinTuc::orderBy('ngay_dang', 'desc')->get();
+        return view('frontend.tintuc.index', compact('dsTinTuc'));
     }
 
     public function create()
@@ -68,13 +72,9 @@ class TinTucController extends Controller
 
     public function show($id)
     {
-        // Lấy bài viết từ cơ sở dữ liệu theo id
-        $tinTuc = TinTuc::findOrFail($id);
-    
-        // Trả về view và truyền dữ liệu tin tức
-        return view('tintuc-chitiet', compact('tinTuc'));
+       $tinTuc = TinTuc::findOrFail($id);
+    return view('frontend.tintuc.show', compact('tinTuc'));
     }
-    
 
     public function destroy($id)
     {
