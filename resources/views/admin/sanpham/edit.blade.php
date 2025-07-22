@@ -6,7 +6,7 @@
 
 @section('content')
 <h2>Sửa Sản Phẩm</h2>
-<form class="form-container" action="{{ route('san-pham.update', $sanPham->id) }}" method="POST" enctype="multipart/form-data">
+<form class="form-container" action="{{ route('admin.san-pham.update', $sanPham->id) }}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
 

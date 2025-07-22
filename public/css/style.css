@@ -118,7 +118,6 @@
     }
 }
 
-
 /* Alerts */
 .alert {
     padding: 15px;
@@ -489,4 +488,44 @@ form input[type="file"] {
 
 .order-table tr:nth-child(even) {
     background-color: #fafafa;
+}
+
+.form-timkiem {
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+    max-width: 600px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.form-nhap {
+    flex: 3;
+    padding: 10px 18px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    min-width: 0;
+    height: 100%; 
+}
+
+.nut-timkiem {
+    flex: 1;
+    padding: 10px 12px; 
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+    height: 100%; 
+}
+
+
+.nut-timkiem:hover {
+    background-color: #45a049;
 }

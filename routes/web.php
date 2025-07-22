@@ -29,7 +29,10 @@ Route::middleware('auth')->group(function () {
 Route::resource('danh-muc', DanhMucSanPhamController::class);
 
 // Quản lý sản phẩm
-Route::resource('san-pham', SanPhamController::class);
+Route::prefix('admin')->name('admin.')->middleware('auth')->group(function () {
+    Route::resource('san-pham', SanPhamController::class);
+});
+
 
 // Quản lý khách hàng
 Route::resource('khachhang', KhachHangController::class);

@@ -21,7 +21,7 @@
             </div>
             <ul class="sidebar-menu">
                 <li><a href="{{ route('danh-muc.index') }}" class="{{ request()->routeIs('danh-muc.*') ? 'active' : '' }}">📁 Quản lý Danh Mục</a></li>
-                <li><a href="{{ route('sanpham.index') }}" class="{{ request()->routeIs('san-pham.*') ? 'active' : '' }}">🧴 Quản lý Sản Phẩm</a></li>
+                <li><a href="{{ route('admin.san-pham.index') }}" class="{{ request()->routeIs('admin.san-pham.*') ? 'active' : '' }}"> 🧴 Quản lý Sản Phẩm </a>  </li>
                 <li><a href="{{ route('tin-tuc.index') }}" class="{{ request()->routeIs('tin-tuc.*') ? 'active' : '' }}">📰 Quản lý Tin Tức</a></li>
                 <li><a href="{{ route('khachhang.index') }}" class="{{ request()->routeIs('khachhang.*') ? 'active' : '' }}">👤 Quản lý Khách Hàng</a></li>
                 <li><a href="{{ route('admin.donhang.index') }}" class="{{ request()->routeIs('admin.donhang.*') ? 'active' : '' }}">📦 Quản lý Đơn Hàng</a></li>

@@ -9,11 +9,19 @@ use Illuminate\Support\Facades\Log;
 
 class SanPhamController extends Controller
 {
-    public function index()
-    {
-        $sanPhams = SanPham::with('danhMuc')->get();
-        return view('admin.sanpham.index', compact('sanPhams'));
+    public function index(Request $request)
+{
+    $query = SanPham::with('danhMuc');
+
+    if ($request->has('keyword') && $request->keyword != '') {
+        $query->where('ten_san_pham', 'like', '%' . $request->keyword . '%');
     }
+
+    $sanPhams = $query->orderBy('id', 'desc')->paginate(10)->appends($request->all());
+
+    return view('admin.sanpham.index', compact('sanPhams'));
+}
+
 
     public function create()
 {
